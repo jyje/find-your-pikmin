@@ -36,7 +36,7 @@ jobs:
 
       - name: Extract tag
         run: |
-          echo "image_version=v$(cat requirements.txt | grep -o '[0-9]\+\.[0-9]\+\.[0-9]\+')" >> $GITHUB_ENV
+          echo "image_version=v$(cat .version | grep -o '[0-9]\+\.[0-9]\+\.[0-9]\+')" >> $GITHUB_ENV
       
       - name: Check tag format
         run: |
